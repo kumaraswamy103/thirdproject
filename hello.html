@@ -1,43 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome to SRU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SR University</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        nav {
+            height: 70px;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4b2aad;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5b2be0;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #4b2aad,
+                #8b5cf6,
+                #2563eb
+            );
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: white;
+            color: #4b2aad;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: #ffd700;
+            color: #222;
+        }
+
+        /* Cards */
+        .section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            margin-bottom: 40px;
+            color: #4b2aad;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: #5b2be0;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #17122b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 700px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Welcome to SRU</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SRU</div>
 
-    <h2>SR University</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <p>
-        Welcome to SR University! We are happy to have you here.
-    </p>
 
-    <hr>
+    <!-- Hero Section -->
+    <section class="hero">
 
-    <h3>About SRU</h3>
+        <div class="hero-content">
 
-    <p>
-        SR University is a university focused on education,
-        innovation, technology, and research.
-    </p>
+            <h1>
+                Welcome to <span>SR University</span>
+            </h1>
 
-    <h3>Courses Offered</h3>
+            <p>
+                Empowering young minds through innovation,
+                technology, education and excellence.
+            </p>
 
-    <ul>
-        <li>Artificial Intelligence and Machine Learning</li>
-        <li>Computer Science Engineering</li>
-        <li>Electronics and Communication Engineering</li>
-        <li>Mechanical Engineering</li>
-        <li>Civil Engineering</li>
-    </ul>
+            <a href="#courses" class="btn">
+                Explore Courses →
+            </a>
 
-    <h3>Contact</h3>
+        </div>
 
-    <p>Email: info@sru.edu.in</p>
+    </section>
 
-    <p>Thank you for visiting SRU!</p>
+
+    <!-- About -->
+    <section class="section" id="about">
+
+        <h2>Why Choose SRU?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🎓 Quality Education</h3>
+                <p>
+                    Learn from experienced faculty with
+                    industry-focused education and modern
+                    teaching methods.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Innovation</h3>
+                <p>
+                    Develop innovative ideas and solve
+                    real-world problems using modern
+                    technologies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Career Growth</h3>
+                <p>
+                    Build your skills and prepare yourself
+                    for exciting career opportunities.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+
+        <h2>Popular Programs</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🤖 AI & ML</h3>
+                <p>
+                    Artificial Intelligence and Machine
+                    Learning
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💻 Computer Science</h3>
+                <p>
+                    Computer Science and Engineering
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📡 Electronics</h3>
+                <p>
+                    Electronics and Communication
+                    Engineering
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <p>
+            © 2026 SR University | Welcome to SRU
+        </p>
+
+    </footer>
 
 </body>
 </html>
